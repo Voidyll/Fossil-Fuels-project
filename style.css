@@ -1,0 +1,123 @@
+/*style.css*/
+
+  body {
+    overflow:scroll;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position:top center;
+    }
+   
+   body::before{            /*makes the background translucent*/
+     content:"";
+     position:fixed;
+     left:0px;
+     right:0px;
+     top:0px;
+     bottom:0px;
+     width:100%;
+     height:100%;
+     z-index:-1;
+     opacity:0.3;
+     background-size: cover;
+     background-position:top center;
+   }
+   
+   
+   h1{
+     position:relative;
+     text-align:center;
+     margin:75px;
+     font-family:monospace;
+     font-size:40px;
+     color:black;
+   }
+   
+   p{
+     position:relative;
+     text-align:left;
+     font-size: 20px;
+     margin:50px 250px 0px 250px;
+     color:black;
+    }
+        
+   h3{
+     position:relative;
+     text-align:center;
+     margin:100px;
+     font-family:monospace;
+     font-size:30px;
+     color:black;
+   }
+   
+   ol{
+     position:relative;
+     text-align:left;
+     font-size: 20px;
+     margin:50px 250px 50px 250px;
+     color:black;
+   }
+   
+   .container{
+     text-align:center;
+     margin:30px;
+   }
+   
+   .btn{                          /*all the btns are for the hover effect*/
+     border:2px solid	#059fad;
+     background: none;
+     padding: 10px 20px;
+     font-size: 20px;
+     font-family:"sans-serif";
+     cursor:pointer;
+     margin:10px;
+     transition:0.8s;
+     position:relative;
+     overflow:hidden;
+   }
+   
+   .btn2{
+     color:#fff;
+   }
+   
+   .btn1:hover{
+     color:	#fff;
+   }
+   
+   .btn2:hover{
+     color:#059fad;
+   }
+   
+   .btn::before{
+     content:"";
+     position:absolute;
+     left:0;
+     width:100%;
+     height:0%;
+     background: #059fad;
+     z-index:-1;
+     transition:0.8s;
+   }
+   
+   .btn1::before{
+     top:0;
+     border-radius:0 0 50% 50%;
+   }
+   
+   .btn2::before{
+     bottom:0;
+     border-radius:50% 50% 0 0;
+   }
+   
+   .btn2::before{
+     height:180%;
+   }
+   
+   .btn1:hover::before{
+     height:180%;
+   }
+   
+   .btn2:hover::before{
+     height:0%;
+   }
+  }
